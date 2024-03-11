@@ -1,0 +1,251 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #f8f8f8;
+  display: flex;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  min-height: 100vh;
+}
+
+.mobile-container {
+  background-color: #fff;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 10px 2px #3333331a;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 600px;
+}
+
+.mobile-container .container-button {
+  height: 7rem;
+  position: relative;
+}
+
+.mobile-container .center-button {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.mobile-container .reset-page:hover {
+  cursor: pointer;
+  color: #3f3f3f;
+}
+
+.mobile-container .reset-page {
+  background-color: #fff;
+  font-size: 2rem;
+  font-family: inherit;
+  font-weight: bold;
+  border-style: hidden;
+}
+
+img {
+  max-width: 100%;
+}
+
+header {
+  padding-bottom: 1.5rem;
+  padding-left: 2rem;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+header input {
+  background-color: #eee;
+  border: none;
+  font-family: inherit;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+}
+
+header button {
+  background-color: transparent;
+  border: none;
+  color: rgb(138, 129, 141);
+  font-size: 1.5rem;
+  margin-left: 10px;
+}
+
+.fav-container {
+  background-color: #ffe2ff;
+  text-align: center;
+  padding: 0.5rem 1rem;
+}
+
+.fav-meals {
+  display: flex;
+  flex-wrap: nowrap;
+  list-style-type: none;
+  padding: 0;
+  white-space: nowrap;
+  overflow: auto;
+  text-overflow: ellipsis;
+  scrollbar-width: thin;
+}
+
+.fav-meals li {
+  cursor: pointer;
+  position: relative;
+  margin: 0.5rem;
+  width: 75px;
+}
+
+.fav-meals li .clear {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  opacity: 0;
+  position: absolute;
+  top: -0.5rem;
+  right: -0.5rem;
+  font-size: 1.2rem;
+}
+
+.fav-meals li:hover .clear {
+  opacity: 1;
+}
+
+.fav-meals li img {
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 0 10px 2px #3333331a;
+  object-fit: fill;
+  height: 70px;
+  width: 70px;
+}
+
+.fav-meals li span {
+  display: block;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 80px;
+}
+
+.fav-meals li span:hover {
+  white-space: normal;
+  overflow: auto;
+}
+
+.meal {
+  border-radius: 3px;
+  box-shadow: 0 0 10px 2px #3333331a;
+  margin: 1rem;
+  overflow: hidden;
+}
+
+.meal-header {
+  position: relative;
+}
+
+.meal-header .random-btn {
+  position: absolute;
+  top: 1rem;
+  background-color: #fff;
+  padding: 0.5rem 1.5rem;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-style: hidden;
+}
+
+.meal-header .random-btn:hover {
+  cursor: pointer;
+  background-color: #222222;
+  color: #fff;
+}
+
+.meal-header img {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.meal-body {
+  display: flex;
+  padding: 1rem;
+}
+
+.meal-body h4 {
+  margin: auto;
+  display: inline-block;
+  padding: auto;
+}
+
+.fav-btn {
+  border: none;
+  background-color: transparent;
+  color: rgb(197, 188, 188);
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.info-btn {
+  border: none;
+  background-color: transparent;
+  color: rgb(197, 188, 188);
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.meal-body .fav-btn.active {
+  color: rgb(255, 195, 255);
+}
+
+.popup-container {
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.popup-container.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.popup {
+  background-color: #fff;
+  position: relative;
+  border-radius: 5px;
+  padding: 1rem 2rem;
+  overflow: auto;
+  max-height: 90vh;
+  max-width: 700px;
+  width: 100%;
+  scrollbar-width: thin;
+}
+
+.popup .close-popup {
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  cursor: pointer;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+}
+
+.meal-info h1 {
+  text-align: center;
+}
